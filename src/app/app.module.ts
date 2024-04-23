@@ -21,7 +21,9 @@ import { BaseComponent } from './base/base.component';
     ToastrModule.forRoot(),
     NgxSpinnerModule,
   ],
-  providers: [],
+  providers: [
+    {provide: "BaseUrl" , useValue: "https://localhost:7137/api"}
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
