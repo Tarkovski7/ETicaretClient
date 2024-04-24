@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BaseComponent } from './base/base.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,9 +21,10 @@ import { BaseComponent } from './base/base.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     NgxSpinnerModule,
+    HttpClientModule
   ],
   providers: [
-    {provide: "BaseUrl" , useValue: "https://localhost:7137/api"}
+    {provide: "BaseUrl" , useValue: "https://localhost:7137/api" , multi : true}
   ],
   bootstrap: [AppComponent],
 })
